@@ -7,7 +7,7 @@ title: 개발일지
   <p class="lead">텀블벅 이후의 정본 개발일지. 매월 1회 + 필요할 때.</p>
   <ul class="posts">
   {% for post in site.posts %}
-    <li><a href="{{ site.baseurl }}{{ post.url }}"><span class="d">{{ post.date | date: "%Y.%m.%d" }}</span><span class="t">{{ post.title }}</span></a></li>
+    <li><a href="{{ site.baseurl }}{{ post.url }}"><span class="d">{{ post.date | date: "%Y.%m.%d %H:%M" }}</span><span class="t">{{ post.title }}</span></a></li>
   {% endfor %}
   </ul>
   {% if site.posts.size == 0 %}<p class="lead">첫 글 준비 중.</p>{% endif %}

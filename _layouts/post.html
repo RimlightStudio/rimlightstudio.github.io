@@ -4,7 +4,7 @@ layout: default
 <main class="wrap post">
   <p class="crumb"><a href="{{ site.baseurl }}/blog/">← 개발일지</a></p>
   <h1>{{ page.title }}</h1>
-  <p class="meta">{{ page.date | date: "%Y.%m.%d" }}{% if page.author %} · {{ page.author }}{% endif %}</p>
+  <p class="meta">{{ page.date | date: "%Y.%m.%d %H:%M" }}{% if page.author %} · {{ page.author }}{% endif %}</p>
   <article class="body">{{ content }}</article>
   <p class="crumb"><a href="{{ site.baseurl }}/blog/">← 목록으로</a></p>
 </main>
