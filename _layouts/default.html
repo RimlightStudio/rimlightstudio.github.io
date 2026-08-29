@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 150 }}">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 150 }}">
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/media/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+{% seo %}
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css">
+</head>
+<body class="{{ page.body_class | default: 'page' }}">
+{% unless page.hide_nav %}
+<header class="nav">
+  <a class="brand" href="{{ site.baseurl }}/">HELL-SEOUL</a>
+  <nav><a href="{{ site.baseurl }}/blog/">개발일지</a><a href="https://x.com/" target="_blank" rel="noopener">X</a><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></nav>
+</header>
+{% endunless %}
+{{ content }}
+{% unless page.hide_nav %}
+<footer class="foot">© {{ site.time | date: "%Y" }} Rimlight Studio · <a href="{{ site.baseurl }}/blog/">개발일지</a></footer>
+{% endunless %}
+</body>
+</html>

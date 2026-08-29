@@ -1,0 +1,18 @@
+---
+layout: default
+hide_nav: true
+body_class: teaser
+---
+<!-- 티저 랜딩: 풀스크린 루프 영상 → 클릭/탭하면 블로그. 영상은 assets/media/teaser.mp4 (10~15초·1080p·H.264·10MB 이하 권장), 포스터 = teaser.jpg -->
+<a class="teaser-link" href="{{ site.baseurl }}/blog/" aria-label="개발일지로 들어가기">
+  <video class="teaser-video" autoplay muted loop playsinline poster="{{ site.baseurl }}/assets/media/teaser.jpg">
+    <source src="{{ site.baseurl }}/assets/media/teaser.mp4" type="video/mp4">
+  </video>
+  <div class="teaser-veil"></div>
+  <div class="teaser-copy">
+    <p class="kicker">RIMLIGHT STUDIO</p>
+    <h1>HELL-SEOUL</h1>
+    <p class="tag">지옥이 된 서울 · 도깨비총 · 재판</p>
+    <p class="cta">눌러서 개발일지 보기 →</p>
+  </div>
+</a>

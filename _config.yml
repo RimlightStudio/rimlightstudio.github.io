@@ -1,0 +1,15 @@
+# Hell-Seoul 공식 사이트 (GitHub Pages · Jekyll 내장 빌드 — 로컬 설치 불필요)
+title: Hell-Seoul
+description: 지옥이 된 서울, 도깨비총과 재판 — Rimlight Studio 개발 블로그
+lang: ko
+url: "https://rim-light.com"
+baseurl: ""
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules]
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+# 검색 색인 (GitHub Pages 내장 지원 플러그인 — 설치 불필요)
+plugins: [jekyll-seo-tag, jekyll-sitemap]
+twitter: { card: summary_large_image }
