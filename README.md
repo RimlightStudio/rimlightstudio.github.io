@@ -1,4 +1,4 @@
-# Hell-Seoul 공식 사이트 (GitHub Pages)
+# 전력재판 : 육도윤회 공식 사이트 (GitHub Pages)
 
 티저 랜딩(풀스크린 루프 영상, 클릭 → 블로그) + 개발일지 블로그. Jekyll 내장 빌드라 **로컬에 아무것도 설치 안 해도** 된다. 게임 레포와 **완전히 분리된** 별도 공개 레포로 운영.
 
@@ -39,7 +39,7 @@
 
 ## 검색 유입 (배포 직후 1회)
 - 구글: https://search.google.com/search-console → 속성 추가(URL 접두어) → HTML 태그 인증(`_layouts/default.html` `<head>`에 메타 1줄) → 사이트맵 `https://<주소>/sitemap.xml` 제출
-- 네이버: https://searchadvisor.naver.com → 사이트 등록 → HTML 태그 인증 → 요청 → 사이트맵 제출(같은 sitemap.xml). 네이버 자사 블로그만큼 강하진 않지만 고유 키워드(헬서울·Hell-Seoul·림라이트)는 잡힌다
+- 네이버: https://searchadvisor.naver.com → 사이트 등록 → HTML 태그 인증 → 요청 → 사이트맵 제출(같은 sitemap.xml). 네이버 자사 블로그만큼 강하진 않지만 고유 키워드(전력재판·육도윤회·림라이트)는 잡힌다
 - 글마다 `description:` 한 줄을 front matter에 쓰면 검색 결과·트위터 카드 문구로 쓰인다 (jekyll-seo-tag)
 
 ## 발견 레이어 (플랫폼 피드가 있는 곳)
