@@ -13,3 +13,6 @@ defaults:
 # 검색 색인 (GitHub Pages 내장 지원 플러그인 — 설치 불필요)
 plugins: [jekyll-seo-tag, jekyll-sitemap]
 twitter: { card: summary_large_image }
+# 날짜 처리: 한국 시간 기준, 미래 날짜 글도 빌드에 포함(시차로 글이 사라지는 사고 방지)
+timezone: Asia/Seoul
+future: true
