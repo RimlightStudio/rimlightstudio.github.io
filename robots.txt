@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rim-light.com/sitemap.xml

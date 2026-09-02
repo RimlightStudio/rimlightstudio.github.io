@@ -4,12 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 150 }}">
-<meta property="og:title" content="{{ page.title | default: site.title }}">
-<meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 150 }}">
-<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/media/og.jpg">
-<meta name="twitter:card" content="summary_large_image">
 {% seo %}
+{% feed_meta %}
+{% if site.naver_site_verification and site.naver_site_verification != "" %}<meta name="naver-site-verification" content="{{ site.naver_site_verification }}">{% endif %}
+{% if site.cloudflare_analytics_token and site.cloudflare_analytics_token != "" %}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cloudflare_analytics_token }}"}'></script>{% endif %}
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css">
 </head>
 <body class="{{ page.body_class | default: 'page' }}">

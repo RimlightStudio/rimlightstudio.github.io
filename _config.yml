@@ -9,10 +9,23 @@ markdown: kramdown
 exclude: [README.md, Gemfile, Gemfile.lock, node_modules]
 defaults:
   - scope: { path: "", type: posts }
-    values: { layout: post }
+    values: { layout: post, image: /assets/media/og.jpg }
+  - scope: { path: "" }
+    values: { image: /assets/media/og.jpg }
 # 검색 색인 (GitHub Pages 내장 지원 플러그인 — 설치 불필요)
-plugins: [jekyll-seo-tag, jekyll-sitemap]
-twitter: { card: summary_large_image }
+plugins: [jekyll-seo-tag, jekyll-sitemap, jekyll-feed]
+# jekyll-seo-tag 입력(제목·설명·canonical·OG·트위터 카드·JSON-LD 자동 생성 — 레이아웃의 {% seo %} 한 줄)
+author: Rimlight Studio
+logo: /assets/media/og.jpg
+twitter: { username: Rimlight_Studio, card: summary_large_image }
+social:
+  name: Rimlight Studio
+  links: ["https://x.com/Rimlight_Studio", "https://www.youtube.com/@Rimlight-Studio"]
+# 검색엔진 등록 토큰 — 값만 채우면 <head>에 자동 삽입 (비어 있으면 출력 안 함)
+# webmaster_verifications: { google: "여기에_content_값" }   # 구글 서치콘솔 'HTML 태그' 방식일 때만 주석 해제(DNS TXT 방식이면 불필요). Liquid는 빈 문자열도 참이라 빈 값으로 두면 빈 메타가 출력됨
+naver_site_verification: ""               # 네이버 서치어드바이저 'HTML 태그' content 값
+# 사이트 계측 — Cloudflare Web Analytics(무료·쿠키 없음). 대시보드 Web Analytics → Add a site → 토큰만 여기에
+cloudflare_analytics_token: ""
 # 날짜 처리: 한국 시간 기준, 미래 날짜 글도 빌드에 포함(시차로 글이 사라지는 사고 방지)
 timezone: Asia/Seoul
 future: true
